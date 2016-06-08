@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Widget Attrs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Windget</th>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @widget_attrs.each do |widget_attr| %>
+      <tr>
+        <td><%= widget_attr.windget %></td>
+        <td><%= widget_attr.name %></td>
+        <td><%= widget_attr.value %></td>
+        <td><%= widget_attr.type %></td>
+        <td><%= link_to 'Show', widget_attr %></td>
+        <td><%= link_to 'Edit', edit_widget_attr_path(widget_attr) %></td>
+        <td><%= link_to 'Destroy', widget_attr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Widget Attr', new_widget_attr_path %>

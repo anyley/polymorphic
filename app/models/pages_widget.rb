@@ -1,0 +1,2 @@
+class PagesWidget < ApplicationRecord
+end

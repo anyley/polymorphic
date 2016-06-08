@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Windget:</strong>
+  <%= @widget_attr.windget %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @widget_attr.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @widget_attr.value %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @widget_attr.type %>
+</p>
+
+<%= link_to 'Edit', edit_widget_attr_path(@widget_attr) %> |
+<%= link_to 'Back', widget_attrs_path %>
