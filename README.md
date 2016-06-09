@@ -67,7 +67,7 @@
  body: "text 111",
 ```
 
-Если во вьюхе вызвать ```render p2.widgets[1].element``` то контроллер определит тип объекта, найдет соответствующий ему партиа и отрисует его
+Если во вьюхе вызвать ```render p2.widgets[1].element``` то контроллер определит тип объекта, найдет соответствующий ему партиал и отрисует его
 ```
 [20] pry(main)> ApplicationController.renderer.render  p2.widgets[1].element
 ActionView::MissingTemplate: Missing partial pictures/_picture ...
