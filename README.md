@@ -9,6 +9,7 @@
 
 ![Общая схема](/diagram.PNG)
 
+
 ##### Создаем новую страницу
 ```ruby
 [1] pry(main)> p2 = Page.create! title: 'Page 2'
@@ -16,6 +17,7 @@
   id: 4,
   title: "Page 2"
 ```
+
 ##### Создаем объект типа Text
 ```ruby
 [3] pry(main)> t1 = Text.new body: 'text 111'
