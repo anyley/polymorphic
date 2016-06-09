@@ -10,16 +10,17 @@
 ![Общая схема](/diagram.PNG)
 
 Создаем новую страницу
- [1] pry(main)> p2 = Page.create! title: 'Page 2'
- => #<Page:0x007fb468077460
+`
+[1] pry(main)> p2 = Page.create! title: 'Page 2'
+=> #<Page:0x007fb468077460
   id: 4,
   title: "Page 2"
-
+`
 Создаем объект типа Text
-```
+`
 [3] pry(main)> t1 = Text.new body: 'text 111'
 => #<Text:0x000000049a75a0 id: nil, body: "text 111", created_at: nil, updated_at: nil>
-```
+`
 
 Создаем объект типа Picture
 ```
