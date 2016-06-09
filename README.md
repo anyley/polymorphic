@@ -68,7 +68,8 @@
  body: "text 111",
 ```
 
-Если во вьюхе вызвать ```render p2.widgets[1].element``` то контроллер определит тип объекта, найдет соответствующий ему партиал и отрисует его
+Если во вьюхе вызвать ```ruby render p2.widgets[1].element``` то контроллер определит тип объекта, найдет соответствующий ему партиал и отрисует его.
+*В данном примере показаны ошибки, потому что я не делал вьюхи с партиалами для данных объектов, но суть в том, что если бы они были рельса нашла бы их и отрисовала*
 ```ruby
 [20] pry(main)> ApplicationController.renderer.render  p2.widgets[1].element
 ActionView::MissingTemplate: Missing partial pictures/_picture ...
@@ -76,7 +77,6 @@ ActionView::MissingTemplate: Missing partial pictures/_picture ...
 [21] pry(main)> ApplicationController.renderer.render  p2.widgets[0].element
 ActionView::MissingTemplate: Missing partial texts/_text ...
 ```
-В данном примере показаны ошибки, потому что я не делал вьюхи с партиалами для данных объектов, но суть в том, что если бы они были рельса нашла бы их и отрисовала
 
 Устанавливаем атрибуты виджетов
 ```ruby
