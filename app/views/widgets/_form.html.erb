@@ -1,0 +1,5 @@
+<% widgets.each do |widget| %>
+  <%# = binding.pry %>
+  <%= render widget.element.to_partial_path + '_edit', element: widget.element %>
+
+<% end %>

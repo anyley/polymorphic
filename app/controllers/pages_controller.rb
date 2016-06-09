@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
+    @widgets = @page.widgets 
   end
 
   # GET /pages/new
@@ -19,6 +20,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
+    @widgets = @page.widgets 
   end
 
   # POST /pages
