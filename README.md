@@ -10,12 +10,10 @@
 ![Общая схема](/diagram.PNG)
 
 Создаем новую страницу
-```
-[1] pry(main)> p2 = Page.create! title: 'Page 2'
-=> #<Page:0x007fb468077460
- id: 4,
- title: "Page 2"
-```
+ [1] pry(main)> p2 = Page.create! title: 'Page 2'
+ => #<Page:0x007fb468077460
+  id: 4,
+  title: "Page 2"
 
 Создаем объект типа Text
 ```
