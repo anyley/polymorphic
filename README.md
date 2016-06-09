@@ -10,26 +10,26 @@
 ![Общая схема](/diagram.PNG)
 
 Создаем новую страницу
-`
+```ruby
 [1] pry(main)> p2 = Page.create! title: 'Page 2'
 => #<Page:0x007fb468077460
   id: 4,
   title: "Page 2"
-`
+```
 Создаем объект типа Text
-`
+```ruby
 [3] pry(main)> t1 = Text.new body: 'text 111'
 => #<Text:0x000000049a75a0 id: nil, body: "text 111", created_at: nil, updated_at: nil>
 `
 
 Создаем объект типа Picture
-```
+```ruby
 [4] pry(main)> pic1 = Picture.new url: 'http://localhost/pic1.png'
 => #<Picture:0x000000048c4de0 id: nil, url: "http://localhost/pic1.png", created_at: nil, updated_at: nil>
 ```
 
 Добавляем на ранее созданную страницу p2 Widget-ы с элементами Text и Picture
-```
+```ruby
 [5] pry(main)> p2.widgets.create! element: t1
 => #<Widget:0x000000047ecb48
  id: 5,
@@ -46,7 +46,7 @@
 ```
 
 Отбираем Widget-ы на выбраной странице
-```
+```ruby
 [7] pry(main)> p2.widgets
 => [#<Widget:0x000000047ecb48
   id: 5,
@@ -61,7 +61,7 @@
 ```
 
 Добираемся до конкретного интересующего нас элемента
-```
+```ruby
 [9] pry(main)> p2.widgets[0].element
 => #<Text:0x000000049a75a0
  id: 4,
@@ -69,7 +69,7 @@
 ```
 
 Если во вьюхе вызвать ```render p2.widgets[1].element``` то контроллер определит тип объекта, найдет соответствующий ему партиал и отрисует его
-```
+```ruby
 [20] pry(main)> ApplicationController.renderer.render  p2.widgets[1].element
 ActionView::MissingTemplate: Missing partial pictures/_picture ...
 
@@ -79,7 +79,7 @@ ActionView::MissingTemplate: Missing partial texts/_text ...
 В данном примере показаны ошибки, потому что я не делал вьюхи с партиалами для данных объектов, но суть в том, что если бы они были рельса нашла бы их и отрисовала
 
 Устанавливаем атрибуты виджетов
-```
+```ruby
 [28] pry(main)> w.widget_attrs.create! name: 'x', atype: 0, value: '1'
 => #<WidgetAttr:0x007fb468227cd8
  id: 3,
