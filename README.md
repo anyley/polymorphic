@@ -77,3 +77,21 @@ ActionView::MissingTemplate: Missing partial texts/_text ...
 ```
 В данном примере показаны ошибки, потому что я не делал вьюхи с партиалами для данных объектов, но суть в том, что если бы они были рельса нашла бы их и отрисовала
 
+Устанавливаем атрибуты виджетов
+```
+[28] pry(main)> w.widget_attrs.create! name: 'x', atype: 0, value: '1'
+=> #<WidgetAttr:0x007fb468227cd8
+ id: 3,
+ widget_id: 1,
+ name: "x",
+ value: "1",
+ atype: 0
+
+[29] pry(main)> w.widget_attrs.create! name: 'y', atype: 0, value: '20'
+=> #<WidgetAttr:0x007fb4740eeae0
+ id: 4,
+ widget_id: 1,
+ name: "y",
+ value: "20",
+ atype: 0
+```
