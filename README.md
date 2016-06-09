@@ -83,7 +83,7 @@ ActionView::MissingTemplate: Missing partial texts/_text ...
 
 ##### Устанавливаем атрибуты виджетов
 ```ruby
-[28] pry(main)> w.widget_attrs.create! name: 'x', atype: 0, value: '1'
+[28] pry(main)> p2.widgets[1].widget_attrs.create! name: 'x', atype: 0, value: '1'
 => #<WidgetAttr:0x007fb468227cd8
  id: 3,
  widget_id: 1,
@@ -91,7 +91,7 @@ ActionView::MissingTemplate: Missing partial texts/_text ...
  value: "1",
  atype: 0
 
-[29] pry(main)> w.widget_attrs.create! name: 'y', atype: 0, value: '20'
+[29] pry(main)> p2.widgets[1].widget_attrs.create! name: 'y', atype: 0, value: '20'
 => #<WidgetAttr:0x007fb4740eeae0
  id: 4,
  widget_id: 1,
