@@ -1,0 +1,6 @@
+$("#text_widget_<%= @text.id %>")
+	.replaceWith("<%=j render(@text.to_partial_path + '_edit', element: @text) %>");
+$("#text_widget_<%= @text.id %>")
+	.css("background-color", "#FFFF9C")
+	.stop()
+	.animate({ backgroundColor: "#FFFFFF"}, 500);

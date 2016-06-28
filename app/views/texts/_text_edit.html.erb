@@ -1,4 +1,5 @@
-<%= form_for(element) do |f| %>
+<div id="text_widget_<%= element.id %>">
+<%= form_for element, remote: true do |f| %>
   <div class="field">
     <%= f.label :body %>
     <%= f.text_field :body %>
@@ -8,3 +9,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
