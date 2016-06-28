@@ -1,0 +1,6 @@
+$("#picture_widget_<%= @picture.id %>")
+	.replaceWith("<%=j render(@picture.to_partial_path + '_edit', element: @picture) %>");
+$("#picture_widget_<%= @picture.id %>")
+	.css("background-color", "#FFFF9C")
+	.stop()
+	.animate({ backgroundColor: "#FFFFFF"}, 500);

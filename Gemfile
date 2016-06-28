@@ -54,6 +54,7 @@ gem 'seed_dump'
 # gem 'sequel_pg', :require=>'sequel'
 
 group :development, :test do
+  gem 'rspec-core', '>= 3.4.4'
   gem 'rspec-rails'
   gem "capybara"
   gem 'capybara-screenshot'

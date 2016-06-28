@@ -42,14 +42,10 @@ class PicturesController < ApplicationController
   def update
 #    respond_to do |format|
       if @picture.update(picture_params)
-        page = Page.find(params[:page])
-        if page
-          redirect_to edit_page_path(page)
-        else
-          respond_to do |format|
-            format.html { redirect_to @picture, notice: 'Text was successfully updated.' }
-            format.json { render :show, status: :ok, location: @picture }
-          end
+        respond_to do |format|
+          format.js
+          #format.html { redirect_to @picture, notice: 'Text was successfully updated.' }
+          #format.json { render :show, status: :ok, location: @picture }
         end
       else
         respond_to do |format|

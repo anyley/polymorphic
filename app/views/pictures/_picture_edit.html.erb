@@ -1,5 +1,5 @@
-<div id="pucture_widget_<%= element.id %>">
-<%= form_for(element) do |f| %>
+<div id="picture_widget_<%= element.id %>">
+<%= form_for element, remote: true do |f| %>
   <div class="field">
     <%= f.label :url %>
     <%= f.text_field :url %>
